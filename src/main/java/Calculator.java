@@ -31,7 +31,6 @@ public class Calculator {
         return runOperation(this.total, num, operation);
     }
 
-
     private double add(double x, double y) {
         return x + y;
     }
@@ -46,6 +45,11 @@ public class Calculator {
 
     private double divide(double x, double y) {
         return x / y;
+    }
+
+    public double clearCalculator() {
+        this.total = 0;
+        return total;
     }
 
     public double getTotal() {
