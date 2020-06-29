@@ -36,22 +36,27 @@ public class Main {
 
         while (retrieveYesOrNoAnswerFromUser()) {
             System.out.println("The current total is " + calculator.getTotal());
-            System.out.println("Do you want to clear the calculator? Answer Y for yes or any thing else for N");
+            System.out.println("Do you want to clear the calculator? Answer Y for yes or anything else for no.");
 
-            System.out.println("Enter the number you want to operate on with the current total:");
-            int num1 = scanner.nextInt();
+            if (retrieveYesOrNoAnswerFromUser()) {
+                calculator.clearCalculator();
+                runFirstCalculation();
+            } else {
+                System.out.println("Enter the number you want to operate on with the current total:");
+                int num1 = scanner.nextInt();
 
-            System.out.println("Enter the operation you would like to use. Options include +, -, *, and /");
-            char operation = scanner.next().charAt(0);
+                System.out.println("Enter the operation you would like to use. Options include +, -, *, and /");
+                char operation = scanner.next().charAt(0);
 
-            try {
-                calculator.runOperationOnTotal(num1, operation);
-            } catch (Exception e) {
-                System.out.println(e);
-                return;
+                try {
+                    calculator.runOperationOnTotal(num1, operation);
+                } catch (Exception e) {
+                    System.out.println(e);
+                    return;
+                }
             }
 
-            System.out.println("Would you like to continue calculating? Answer Y for yes or N for no.");
+            System.out.println("Would you like to continue calculating? Answer Y for yes or anything else for no.");
         }
 
         System.out.println("The final total is " + calculator.getTotal());
