@@ -45,4 +45,10 @@ public class CalculatorTest {
         underTest.runOperation(underTest.runOperation(3, 4, '+'), 8.5, '-');
         assertEquals(-1.5, underTest.getTotal());
     }
+
+    @Test
+    public void clearCalculator() throws Exception {
+        assertEquals(0, underTest.clearCalculator());
+    }
+
 }
