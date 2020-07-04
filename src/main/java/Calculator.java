@@ -20,6 +20,9 @@ public class Calculator {
             case '/':
                 this.total = divide(x, y);
                 break;
+            case '%':
+                this.total = modulo(x, y);
+                break;
             default:
                 throw new Exception("ERROR:Invalid operation! Try running the program again.");
         }
@@ -47,6 +50,8 @@ public class Calculator {
     private double divide(double x, double y) {
         return x / y;
     }
+
+    private double modulo(double x, double y) { return x % y; }
 
     public double getTotal() {
         return this.total;
