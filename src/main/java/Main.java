@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Enter the second number to operate on:");
         int num2 = scanner.nextInt();
 
-        System.out.println("Enter the operation you would like to use. Options include +, -, *, and /");
+        System.out.println("Enter the operation you would like to use. Options include +, -, *, / and %");
         char operation = scanner.next().charAt(0);
 
         try {

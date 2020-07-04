@@ -28,6 +28,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void runOperation_modulo() throws Exception {
+        assertEquals(2, underTest.runOperation(2, 4, '%'));
+    }
+
+    @Test
     public void runOperation_invalidOperand() throws Exception {
 
         Exception exception = assertThrows(Exception.class, () -> {
