@@ -1,6 +1,6 @@
 public class Calculator {
 
-    private double total = 0;
+   private double total = 0;
 
    public double runOperation(double x, double y, char operation) throws Exception {
         switch(operation) {
