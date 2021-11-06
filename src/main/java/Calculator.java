@@ -1,6 +1,6 @@
 public class Calculator {
 
-    double total = 0;
+    private double total = 0;
 
     public Calculator() {
 
