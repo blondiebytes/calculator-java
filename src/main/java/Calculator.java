@@ -2,10 +2,6 @@ public class Calculator {
 
     private double total = 0;
 
-    public Calculator() {
-
-    }
-
    public double runOperation(double x, double y, char operation) throws Exception {
         switch(operation) {
             case '+':
