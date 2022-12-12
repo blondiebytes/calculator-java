@@ -20,6 +20,9 @@ public class Calculator {
             case '/':
                 this.total = divide(x, y);
                 break;
+            case '^':
+                this.total = exponentiation(x, y);
+                break;
             default:
                 throw new Exception("ERROR:Invalid operation! Try running the program again.");
         }
@@ -46,6 +49,10 @@ public class Calculator {
 
     private double divide(double x, double y) {
         return x / y;
+    }
+
+    private double exponentiation(double x, double y) {
+        return Math.pow(x, y);
     }
 
     public double getTotal() {
