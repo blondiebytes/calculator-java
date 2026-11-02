@@ -23,6 +23,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void runOperation_modulo() throws Exception {
+        assertEquals(1, underTest.runOperation(10, 3, '%'));
+    }
+
+    @Test
     public void runOperation_divide() throws Exception {
         assertEquals(8, underTest.runOperation(16, 2, '/'));
     }
